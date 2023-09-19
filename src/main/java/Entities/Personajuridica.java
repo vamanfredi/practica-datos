@@ -1,5 +1,10 @@
 package Entities;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 @DiscriminatorValue("")
 public class PersonaJuridica extends Persona{

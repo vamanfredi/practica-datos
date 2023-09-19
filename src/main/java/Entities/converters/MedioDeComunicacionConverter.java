@@ -1,15 +1,18 @@
 package Entities.converters;
 
 import Entities.Email;
-import Entities.MedioDeComunicaciones;
+import Entities.MedioDeComunicacion;
 import Entities.Telegram;
 import Entities.Whatsapp;
 
+import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
+
 @Converter(autoApply = true)
-public class MedioDeComunicacionConverter implements AttributeConverter<MedioDeComunicaciones, Integer> {
+public class MedioDeComunicacionConverter implements AttributeConverter<MedioDeComunicacion, Integer> {
     @Override
-    public Integer convertToDatabaseColumn(MedioDeComunicaciones medio){
-        String medio = contactable.getClass().getName();
+    public Integer convertToDatabaseColumn(MedioDeComunicacion medio){
+        String nombre = medio.getClass().getName();
         switch(nombre){
             case "Whatsapp":
                 return 0;
@@ -22,8 +25,8 @@ public class MedioDeComunicacionConverter implements AttributeConverter<MedioDeC
         }
     } //persistir, desde java a la base
     @Override
-    public MedioDeComunicaciones convertToEntityAttribute(Integer num) {
-        MedioDeComunicaciones medio = null;
+    public MedioDeComunicacion convertToEntityAttribute(Integer num) {
+        MedioDeComunicacion medio = null;
         if(num==0){medio= new Whatsapp();}
         if(num==1){medio= new Telegram();}
         if(num==2){medio= new Email();}

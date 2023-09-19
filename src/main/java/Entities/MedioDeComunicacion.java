@@ -1,5 +1,5 @@
 package Entities;
 
-public interface MedioDeComunicaciones extends Abstract{
-    public void enviarAviso(String aviso, Contactable c ){};
+public interface MedioDeComunicacion{
+    public void enviarAviso(String aviso, Contactable c);
 }
