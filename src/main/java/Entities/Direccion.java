@@ -1,3 +1,5 @@
+package Entities;
+
 @Entity
 @Table(name = "direccion")
 public class Direccion{

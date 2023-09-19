@@ -1,3 +1,10 @@
+package Entities.converters;
+
+import Entities.Email;
+import Entities.MedioDeComunicaciones;
+import Entities.Telegram;
+import Entities.Whatsapp;
+
 @Converter(autoApply = true)
 public class MedioDeComunicacionConverter implements AttributeConverter<MedioDeComunicaciones, Integer> {
     @Override

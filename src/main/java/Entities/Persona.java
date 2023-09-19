@@ -1,3 +1,5 @@
+package Entities;
+
 @Entity
 @Table(name = "persona")
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)

@@ -1,3 +1,5 @@
+package Entities;
+
 @Entity
 @DiscriminatorValue("")
 public class PersonaFisica extends Persona{
